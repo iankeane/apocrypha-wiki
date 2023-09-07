@@ -1,0 +1,7 @@
+site_name: Apocrypha Wiki
+theme: windmill-dark
+
+nav:
+  - Server Overview: server-overview.md
+  - Getting Started: getting-started.md
+  - Mod Tutorials: mod-tutorials.md

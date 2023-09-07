@@ -1,0 +1,44 @@
+* About
+- This is the repo for managing the apocrypha wiki
+- This project uses [mkdocs](https://www.mkdocs.org) to manage
+  [markdown](https://www.markdownguide.org/basic-syntax/) which are organized
+  into a wiki
+- All entries should be review locally before being submitted as a PR; upon
+  merging into main the changes will be reflected in the website immediately
+- *NOTE:* This wiki is for managing information specific to the apocrypha rust
+  server -- please do not put general rust tips here
+
+* Running the wiki locally (always do this when editing)
+- Install the required tools (only needs to run the first time you do this)
+  - =pip3 install -r requirements.txt=
+- From the root directory of the git repo, run =mkdocs serve=
+- Visit =localhost:8000= or =127.0.0.1:8000= in a browser to see the wiki while
+  you edit files
+  - If something was already running on port 8000, you can run =mkdocs serve
+    -a localhost:7777= to run on another port (in this case 7777)
+
+* Structuring files and adding to the wiki
+** Navbar Items
+- If you want your markdown file to show up in the navbar, add it to the =nav= entry in =mkdocs.yml=
+- Once added, sub-items are automatically generated any time you put anything under a header (=#=) in your markdown file, so be judicious in what gets its own header!
+** Linking to other entries
+- Links can be generated using the markdown filename and the link slug for local files
+  - e.g. =[link](getting-started.md#useful-keybindings)=
+** Adding Images
+- Images are stored using the regular markdown syntax
+  - e.g. ![image text](getting-started/image.png)
+- In the above example, I put the image in a folder called =getting started= which does not exist and would have to be created
+- As convention, please create a directory with the same name as your md file to put images in if you require them so the docs folder doesn't get too crufy
+- If possible, use a reasonable image file size for what you're trying to disply
+
+* Submitting wiki additions
+- To submit a proposed update, create a branch with your proposed changes and submit a PR
+- The PR can be reviewed by an admin and merged
+  - Admins should use =squash and merge= and delete the branch when PR is merged
+  - Deleted branches for merged PRs can *always* be recovered
+
+* TODO
+- Steamdeck setup guide
+- Common steam troubleshooting
+- Pad out description in index.md, find a nice image to use
+- Add server rules in index.md
